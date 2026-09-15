@@ -2,7 +2,10 @@ name: LabyAddon Build
 
 on:
   push:
-    branches: [ "master", "main" ]
+    branches:
+      - "master"
+      - "main"
+      - "fix/labymod4-template-2026"
   pull_request:
     branches: [ "master", "main" ]
   workflow_dispatch:
@@ -25,9 +28,9 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Build with Gradle
-        run: ./gradlew build --full-stacktrace
+        run: sh gradlew build --full-stacktrace
       - name: Create Release Artifact
-        run: ./gradlew createReleaseJar
+        run: sh gradlew createReleaseJar
       - name: Upload Artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0 # v7.0.1
         with:
