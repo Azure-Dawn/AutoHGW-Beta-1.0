@@ -1,25 +1,20 @@
-package org.example.core;
+package dev.azure.dawn.autohgw;
 
 import net.labymod.api.addon.LabyAddon;
 import net.labymod.api.models.addon.annotation.AddonMain;
-import org.example.core.commands.ExamplePingCommand;
-import org.example.core.listener.ExampleGameTickListener;
 
 @AddonMain
-public class ExampleAddon extends LabyAddon<ExampleConfiguration> {
+public class AutoHGWAddon extends LabyAddon<AutoHGWConfiguration> {
 
   @Override
   protected void enable() {
     this.registerSettingCategory();
-
-    this.registerListener(new ExampleGameTickListener(this));
-    this.registerCommand(new ExamplePingCommand());
-
-    this.logger().info("Enabled the Addon");
+    this.registerListener(new AutoHGWTickListener(this));
+    this.logger().info("AutoHGW enabled");
   }
 
   @Override
-  protected Class<ExampleConfiguration> configurationClass() {
-    return ExampleConfiguration.class;
+  protected Class<AutoHGWConfiguration> configurationClass() {
+    return AutoHGWConfiguration.class;
   }
 }
