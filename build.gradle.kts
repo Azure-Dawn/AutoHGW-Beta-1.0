@@ -9,7 +9,7 @@ group = "dev.azure.dawn"
 version = providers.environmentVariable("VERSION").getOrElse("1.0.0")
 
 labyMod {
-    defaultPackageName = "dev.azure.dawn.autohgw"
+    defaultPackageName = "dev.azure.dawn.autohgws"
 
     minecraft {
         registerVersion(versions.toTypedArray()) {
@@ -22,7 +22,7 @@ labyMod {
     }
 
     addonInfo {
-        namespace = "auto-hgw"
+        namespace = "autohgws"
         displayName = "AutoHGW"
         author = "Azure-Dawn"
         description = "AutoHGW LabyMod 4 addon"
