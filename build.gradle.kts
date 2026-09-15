@@ -5,17 +5,16 @@ plugins {
 
 val versions = providers.gradleProperty("net.labymod.minecraft-versions").get().split(";")
 
-group = "org.example"
+group = "dev.azure.dawn"
 version = providers.environmentVariable("VERSION").getOrElse("1.0.0")
 
 labyMod {
-    defaultPackageName = "org.example" //change this to your main package name (used by all modules)
+    defaultPackageName = "dev.azure.dawn.autohgw"
 
     minecraft {
         registerVersion(versions.toTypedArray()) {
             runs {
                 getByName("client") {
-                    // When the property is set to true, you can log in with a Minecraft account
                     // devLogin = true
                 }
             }
@@ -23,10 +22,10 @@ labyMod {
     }
 
     addonInfo {
-        namespace = "example"
-        displayName = "ExampleAddon"
-        author = "Example Author"
-        description = "Example Description"
+        namespace = "autohgw"
+        displayName = "AutoHGW"
+        author = "Azure-Dawn"
+        description = "AutoHGW LabyMod 4 addon"
         minecraftVersion = "*"
         version = rootProject.version.toString()
     }
