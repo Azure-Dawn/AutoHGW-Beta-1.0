@@ -22,7 +22,7 @@ labyMod {
     }
 
     addonInfo {
-        namespace = "autohgw"
+        namespace = "auto-hgw"
         displayName = "AutoHGW"
         author = "Azure-Dawn"
         description = "AutoHGW LabyMod 4 addon"
