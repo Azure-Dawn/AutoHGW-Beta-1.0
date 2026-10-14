@@ -24,8 +24,8 @@ labyMod {
     addonInfo {
         namespace = "autohgw"
         displayName = "AutoHGW"
-        author = "Azure-Dawn"
-        description = "AutoHGW LabyMod 4 addon"
+        author = "gvvv"
+        description = "Send HGW in Minecraft chat using a configurable hotkey."
         minecraftVersion = "*"
         version = rootProject.version.toString()
     }
