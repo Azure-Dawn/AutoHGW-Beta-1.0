@@ -1,0 +1,12 @@
+{
+  "autohgw": {
+    "settings": {
+      "enabled": {
+        "name": "Enabled"
+      },
+      "hgwKey": {
+        "name": "Send HGW Hotkey"
+      }
+    }
+  }
+}
