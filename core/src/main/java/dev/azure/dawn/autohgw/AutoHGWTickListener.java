@@ -19,12 +19,18 @@ public class AutoHGWTickListener {
     }
 
     AutoHGWConfiguration configuration = this.addon.configuration();
-    if (!configuration.enabled().get() || event.key() != configuration.hgwKey().get()) {
+    if (!configuration.enabled().get()) {
       return;
     }
 
     // Do not send the hotkey while a menu or chat screen is open.
     if (this.addon.labyAPI().minecraft().minecraftWindow().isScreenOpened()) {
+      return;
+    }
+
+    // Compare the configured key safely in case the setting is temporarily unset.
+    if (configuration.hgwKey().get() == null
+        || !configuration.hgwKey().get().equals(event.key())) {
       return;
     }
 
